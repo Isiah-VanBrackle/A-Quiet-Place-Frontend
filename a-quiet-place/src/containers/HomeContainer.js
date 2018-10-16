@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HomeNavBar from './HomeNavBar.js'
+import HomeNavBar from '../components/HomeNavBar.js'
 
 class Home extends React.Component {
   render () {

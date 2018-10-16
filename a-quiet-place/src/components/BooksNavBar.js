@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-const BooksNavbar = () => {
+const BooksNavbar = (props) => {
   return(
     <div className="navbar-fixed">
       <nav className="blue-grey">
@@ -11,9 +11,12 @@ const BooksNavbar = () => {
           </ul>
           <form>
             <div className="input-field col s6">
-              <input id="search" type="search" required/>
+              <input id="search" type="search" onChange={props.booksSearchInput} autoComplete="off" required/>
               <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
               <i className="material-icons">close</i>
+              <button className="btn-floating btn-large halfway-fab waves-effect waves-light blue-grey darken-1 right" type="submit" name="action" onClick={props.booksHandleSubmit}>
+                <i className="material-icons right">send</i>
+              </button>
             </div>
           </form>
         </div>
