@@ -7,15 +7,30 @@
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.BooksResultsContainer {
+  width: 25vw;
+  height: 100vw
+}
+
+.card {
+  width: 275px;
+  height: 275px;
+  text-align: left;
+  margin: 5px;
+}
+
+.card .card-title {
+  font-size: 20px;
+  font-weight: 300
+}
+
+.card-image {
+  height: 50%;
+  width: 100px
+}
+
+.author {
+  font-size: 13px;
 }
 
 .App-link {

@@ -1,11 +1,16 @@
 import React, { Component, Fragment } from 'react';
+
 import BooksNavBar from '../components/BooksNavBar.js'
+import BooksResultsContainer from './BooksResultsContainer.js'
+
+import gApi from '../google_uris.js'
 
 class Books extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      booksQuery: ''
+      booksQuery: '',
+      books: []
     }
   }
 
@@ -16,11 +21,16 @@ class Books extends Component {
   }
 
   booksHandleSubmit = (event) => {
+    event.preventDefault();
     console.log("I was submitted", event.target);
+    fetch(`${gApi}volumes?q=${this.state.booksQuery}`)
+    .then(resp => resp.json())
+    .then(books => this.setState({books: books.items}))
+    event.target.reset();
   }
 
   render() {
-    console.log(this.state.query);
+    console.log(this.state.books);
     return (
       <Fragment>
         <div className="Books">
@@ -29,6 +39,7 @@ class Books extends Component {
             booksHandleSubmit={this.booksHandleSubmit}
           />
           <h1>This should appear once books link is clicked it's where i intend to put all my books data   </h1>
+          <BooksResultsContainer books={this.state.books}/>
         </div>
       </Fragment>
     );

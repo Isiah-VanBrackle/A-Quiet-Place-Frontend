@@ -5,7 +5,8 @@ import HomeContainer from './containers/HomeContainer.js'
 import BooksContainer from './containers/BooksContainer.js'
 
 import results from './yelp_data.js'
-import gApi from './google_uris.js'
+import './App.css'
+
 
 class App extends Component {
 
@@ -17,9 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(`${gApi}volumes?q=Six+of+Crows`)
-    .then(resp => resp.json())
-    .then(console.log)
+
   }
 
 
