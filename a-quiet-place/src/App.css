@@ -17,6 +17,7 @@
   height: 275px;
   text-align: left;
   margin: 5px;
+  overflow-y: auto;
 }
 
 .card .card-title {
@@ -32,6 +33,7 @@
 .author {
   font-size: 13px;
 }
+
 
 .App-link {
   color: #61dafb;

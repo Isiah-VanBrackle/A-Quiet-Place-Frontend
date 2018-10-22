@@ -21,16 +21,20 @@ const BookResults = (props) => {
     //   </div>
     // </div>
     <div className="card">
-      <Card header={<CardTitle reveal image={props.book.volumeInfo.imageLinks.thumbnail} waves='light'/>}
+      <Card header={<CardTitle reveal image={props.hasImage(props)} waves='light'/>}
         title={props.book.volumeInfo.title}
         reveal={
           <p>
             Average rating: {props.book.volumeInfo.averageRating}
             <br/>
-            {props.book.searchInfo.textSnippet}
+            {props.hasSnippet(props)}
+            <br/>
+            <a className="btn-floating btn-tiny waves-effect waves-light right blue-grey" onClick={() => props.booksHandleClick(props.book.volumeInfo)}><i className="material-icons right small">add</i></a>
           </p>
         }>
-        <p className="author">Author: {props.book.volumeInfo.authors[0]}</p>
+        <p className="author">Author: {
+          props.hasAuthor(props)
+        }</p>
       </Card>
     </div>
     // <Col m={7} s={12}>
