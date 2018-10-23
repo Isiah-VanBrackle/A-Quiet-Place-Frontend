@@ -7,7 +7,7 @@ const BooksNavbar = (props) => {
       <nav className="blue-grey">
         <div className="nav-wrapper row">
           <ul id='nav-mobile' className="left">
-            <li className="active"><NavLink to= "/">Home</NavLink></li>
+            <li className="active"><NavLink to= "/home">Home</NavLink></li>
           </ul>
           <form onSubmit={props.booksHandleSubmit}>
             <div className="input-field col s6">

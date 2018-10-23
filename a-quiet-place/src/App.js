@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
+import MainPageContainer from './containers/MainPageContainer.js'
+import LoginForm from './components/LoginForm.js'
+import SignUpForm from './components/SignUpForm.js'
+
 import HomeContainer from './containers/HomeContainer.js'
 import BooksContainer from './containers/BooksContainer.js'
 
@@ -13,7 +17,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      results: results
+      currentUser: {}
     }
   }
 
@@ -21,13 +25,25 @@ class App extends Component {
 
   }
 
+  logout = () => {
+
+  }
+
+  setUser = () => {
+
+  }
+
 
   render() {
     console.log(this.state);
+    // lets check to see if we are logged in
     return (
       <Router>
         <div className="App">
-          <Route exact path='/' component={HomeContainer}/>
+          <Route exact path='/' component={MainPageContainer}/>
+          <Route path='/login' component={LoginForm} />
+          <Route path='/sign_up' component={SignUpForm}/>
+          <Route path='/home' component={HomeContainer} />
           <Route path='/books' component={BooksContainer}/>
         </div>
       </Router>
