@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {Input, Row, Button} from 'react-materialize'
+import { NavLink } from 'react-router-dom'
+import { Input, Row, Button, Icon} from 'react-materialize'
 import UserAdapter from '../adapters/UserAdapter'
 
 class SignUpForm extends Component {
@@ -22,14 +23,15 @@ class SignUpForm extends Component {
   render() {
     const {username, password} = this.state
     return(
-      <div>
+      <div className="SignUpForm">
         <form>
           <Row>
-            <Input placeholder="Placeholder" s={6} label="First Name" />
-            <Input s={6} label="Last Name" />
-            <Input s={12} label="username" />
-            <Input type="password" label="password" s={12} />
-            <Button floating medium className='blue-grey' waves='light' type="sumbit" icon='send' />
+            <Input s={6} label="First Name" autoComplete="off"/>
+            <Input s={6} label="Last Name" autoComplete="off"/>
+            <Input s={12} label="username" autoComplete="off"/>
+            <Input type="password" label="password" s={12} autoComplete="off"/>
+            <Button className='blue-grey' type="sumbit" waves='light'>submit<Icon right>send</Icon></Button>
+            <p>Old Friend?<NavLink to="/login"> Welcome Back</NavLink></p>
           </Row>
         </form>
       </div>
