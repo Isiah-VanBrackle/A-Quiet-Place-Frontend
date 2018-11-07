@@ -2,21 +2,116 @@
   text-align: center;
 }
 
+.MainPage{
+  background: url('https://preview.ibb.co/fHFsTA/IMG-8000.jpg');
+  background-size:  cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(10,100%,100%,0.60);
+  background-blend-mode: overlay;
+}
+
+.logoContainer {
+  width: 35vw;
+  height: 100%
+}
+
+h1 {
+  color: #37474f;
+  font-weight: 800;
+}
+
+h3 {
+  color: #37474f;
+  font-weight: 700;
+}
+
+.coffee {
+  color: #37474f;
+  font-weight: 900;
+}
+
+.LoginPage {
+  background: url('https://preview.ibb.co/fHFsTA/IMG-8000.jpg');
+  background-size:  cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(10,100%,100%,0.60);
+  background-blend-mode: overlay;
+}
+
 .LoginForm {
   background-color: white;
-  margin: 20% 20% 25% 20%;
-  padding: 5px 20px 5px 20px;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 20px 20px 2px 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.SignUpPage {
+  background: url('https://preview.ibb.co/fHFsTA/IMG-8000.jpg');
+  background-size:  cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(10,100%,100%,0.60);
+  background-blend-mode: overlay;
 }
 
 .SignUpForm {
   background-color: white;
-  margin: 20% 20% 25% 20%;
-  padding: 5px 20px 5px 20px;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 20px 20px 2px 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .BooksResultsContainer {
-  width: 25vw;
-  height: 100vw
+  width: 25%;
+}
+
+#books-page {
+  display: flex;
+  height: calc(100vh - 96px);
+  width: 100vw;
+}
+
+.librayDisplay {
+  /* overflow: hidden; */
+  width: 75%;
+  /* height: 100vh; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.libraryImage {
+  width: 50%;
 }
 
 .card {
@@ -44,13 +139,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

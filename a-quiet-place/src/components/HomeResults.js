@@ -13,7 +13,7 @@ const HomeResults = (props) => {
             <br/>
             {props.result.comment}
             <br/>
-            <a className="btn-floating btn-tiny waves-effect waves-light right blue-grey"><i className="material-icons right small">add</i></a>
+            <a className="btn-floating btn-tiny waves-effect waves-light right blue-grey"><i className="material-icons right small">bookmark</i></a>
           </p>
         }>
         <p className="address"> {

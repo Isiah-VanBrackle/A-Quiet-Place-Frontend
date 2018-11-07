@@ -23,17 +23,19 @@ class SignUpForm extends Component {
   render() {
     const {username, password} = this.state
     return(
-      <div className="SignUpForm">
-        <form>
-          <Row>
-            <Input s={6} label="First Name" autoComplete="off"/>
-            <Input s={6} label="Last Name" autoComplete="off"/>
-            <Input s={12} label="username" autoComplete="off"/>
-            <Input type="password" label="password" s={12} autoComplete="off"/>
-            <Button className='blue-grey' type="sumbit" waves='light'>submit<Icon right>send</Icon></Button>
-            <p>Old Friend?<NavLink to="/login"> Welcome Back</NavLink></p>
-          </Row>
-        </form>
+      <div className="SignUpPage">
+        <div className="SignUpForm">
+          <form>
+            <Row>
+              <Input s={6} label="First Name" autoComplete="off"/>
+              <Input s={6} label="Last Name" autoComplete="off"/>
+              <Input s={12} label="username" autoComplete="off"/>
+              <Input type="password" label="password" s={12} autoComplete="off"/>
+              <Button className='blue-grey' type="sumbit" waves='light'>submit<Icon right>send</Icon></Button>
+              <p>Old Friend?<NavLink to="/login"> Welcome Back</NavLink></p>
+            </Row>
+          </form>
+        </div>
       </div>
 
     )

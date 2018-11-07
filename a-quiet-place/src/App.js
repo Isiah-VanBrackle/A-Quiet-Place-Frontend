@@ -26,7 +26,13 @@ class App extends Component {
   componentDidMount() {
     if(localStorage.getItem("token")){
       UserAdapter.persist(localStorage.getItem("token"))
-      .then(resp => this.setUser(resp))
+      .then(resp => {
+        if(!resp.error){
+          this.setUser(resp)
+        }else{
+          this.logout()
+        }
+      })
     }
   }
 
@@ -55,8 +61,8 @@ class App extends Component {
           <Route exact path='/' component={MainPageContainer}/>
           <Route path='/login' render={(routeProps) => <LoginForm setUser={this.setUser} {...routeProps}/>}/>
           <Route path='/sign_up' component={SignUpForm}/>
-          <Route path='/home' component={HomeContainer} />
-          <Route path='/books' component={BooksContainer}/>
+          <Route path='/home' render={() => <HomeContainer currentUser={this.state.currentUser}/>} />
+          <Route path='/books' render={() => <BooksContainer currentUser={this.state.currentUser}/>}/>
         </div>
       </Router>
     );

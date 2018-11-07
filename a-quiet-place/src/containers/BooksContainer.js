@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import BooksNavBar from '../components/BooksNavBar.js'
 import BooksResultsContainer from './BooksResultsContainer.js'
-import BooksLibraryContainer from './BooksLibraryContainer.js'
+import BookLibrary from '../components/BookLibrary.js'
 
 import gApi from '../google_uris.js'
 
@@ -48,12 +48,14 @@ class Books extends Component {
       <Fragment>
         <div className="Books">
           <BooksNavBar
+            currentUser={this.props.currentUser}
             booksSearchInput={this.booksSearchInput}
             booksHandleSubmit={this.booksHandleSubmit}
           />
-          <h1>This should appear once books link is clicked it's where i intend to put all my books data   </h1>
-          <BooksResultsContainer books={this.state.books} booksHandleClick={this.booksHandleClick}/>
-          <BooksLibraryContainer myLibrary={this.state.myLibrary}/>
+          <div id="books-page">
+            <BooksResultsContainer books={this.state.books} booksHandleClick={this.booksHandleClick}/>
+            <BookLibrary myLibrary={this.state.myLibrary} />
+          </div>
         </div>
       </Fragment>
     );

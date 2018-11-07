@@ -39,15 +39,17 @@ class LoginForm extends Component {
   render() {
     const {username, password} = this.state
     return(
-      <div className="LoginForm">
-        <form onSubmit={this.handleSumbit}>
-          <Row>
-            <Input s={12} name="username" label="username" autoComplete="off" onChange={this.handleChange} validate><Icon>assignment_ind</Icon></Input>
-            <Input type="password" name="password" label="password" s={12} autoComplete="off" onChange={this.handleChange} validate><Icon>lock</Icon></Input>
-            <Button className='blue-grey' type="sumbit" waves='light'>submit<Icon right>send</Icon></Button>
-            <p>New here?<NavLink to="/sign_up"> Sign up!</NavLink></p>
-          </Row>
-        </form>
+      <div className="LoginPage">
+        <div className="LoginForm">
+          <form onSubmit={this.handleSumbit}>
+            <Row>
+              <Input s={12} name="username" label="username" autoComplete="off" onChange={this.handleChange} validate><Icon>assignment_ind</Icon></Input>
+              <Input type="password" name="password" label="password" s={12} autoComplete="off" onChange={this.handleChange} validate><Icon>lock</Icon></Input>
+              <Button className='blue-grey' type="sumbit" waves='light'>submit<Icon right>send</Icon></Button>
+              <p>New here?<NavLink to="/sign_up"> Sign up!</NavLink></p>
+            </Row>
+          </form>
+        </div>
       </div>
 
     )

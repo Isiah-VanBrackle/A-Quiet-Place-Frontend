@@ -11,7 +11,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       homeQuery: '',
-      places: results
+      places: []
     };
   }
 
@@ -19,17 +19,27 @@ class Home extends React.Component {
 
   }
 
+  homeHandleSubmit = (event) => {
+    event.preventDefault()
+    this.setState({places: results})
+    event.target.reset();
+  }
+
+  homeHandleClick = (event) => {
+    
+  }
 
 
   render () {
+    console.log("user", this.props.currentUser);
     return (
       <Fragment>
         <div className="Home">
           <HomeNavBar
-
-
+            currentUser={this.props.currentUser}
+            homeHandleSubmit={this.homeHandleSubmit}
           />
-          <h1>Home! - This is what should display under my main home page's nav bar when the app first loads</h1>
+          <h1>Hello! {`${this.props.currentUser.first_name}`} use the search bar above to find cafe's near you.</h1>
           <HomeResultsContainer places={this.state.places}/>
         </div>
       </Fragment>

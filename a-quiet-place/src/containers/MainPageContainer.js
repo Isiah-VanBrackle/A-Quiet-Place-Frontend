@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+import { Icon } from 'react-materialize'
 
 class MainPageContainer extends Component {
-
+//https://image.ibb.co/dwWKaq/coffee-or-tea.jpg
   render() {
     return (
       <div className="MainPage">
@@ -20,10 +22,11 @@ class MainPageContainer extends Component {
         </div>
         <div className="row">
           <div className="vertical-align">
-            <div className="large-6 columns align-middle">
-              <div className="logo"></div>
+            <div className="logoContainer">
+              <div className="logo"><Icon large className="coffee">local_cafe</Icon></div>
+              <h1>A Quiet Place</h1>
               <div className="short-rule"></div>
-              <h2></h2>
+              <h3>Discover new cafe's, and keep track of your favorite books!</h3>
             </div>
           </div>
         </div>

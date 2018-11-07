@@ -1,4 +1,4 @@
-const BASE_API = ""
+const BASE_API = "http://localhost:3000/api/v1"
 
 class UserAdapter{
   static login(data){

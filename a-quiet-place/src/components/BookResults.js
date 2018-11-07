@@ -29,7 +29,7 @@ const BookResults = (props) => {
             <br/>
             {props.hasSnippet(props)}
             <br/>
-            <a className="btn-floating btn-tiny waves-effect waves-light right blue-grey" onClick={() => props.booksHandleClick(props.book.volumeInfo)}><i className="material-icons right small">add</i></a>
+            <a className="btn-floating btn-tiny waves-effect waves-light right blue-grey" onClick={() => props.booksHandleClick(props.book.volumeInfo)}><i className="material-icons right small">loyalty</i></a>
           </p>
         }>
         <p className="author">Author: {
